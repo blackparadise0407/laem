@@ -1,0 +1,316 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: MoonTime;
+  src: url("../assets/fonts/MoonTime-Regular.otf") format("opentype");
+}
+
+:root {
+  font-size: 10px;
+}
+
+html {
+  background-color: #fbf3e4;
+  color: #8a422f;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  height: auto;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+nav .logo {
+  margin-left: 10rem;
+}
+
+nav .logo img {
+  width: 16rem;
+}
+
+nav .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 10rem;
+}
+
+nav .nav-list > * {
+  margin: 0 3rem;
+}
+
+nav .nav-list .nav-item {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+nav .nav-list .nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.3rem;
+  background-color: #8a422f;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform ease 0.3s;
+  transition: -webkit-transform ease 0.3s;
+  transition: transform ease 0.3s;
+  transition: transform ease 0.3s, -webkit-transform ease 0.3s;
+}
+
+nav .nav-list .nav-item:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.landing-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.landing-page .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.landing-page .container .heading {
+  max-width: 50rem;
+  width: 50rem;
+  margin-top: 10rem;
+}
+
+.landing-page .container .heading .title-wrapper {
+  text-align: center;
+}
+
+.landing-page .container .heading .title-wrapper .title {
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-family: "Playfair Display SC", serif;
+  font-size: 12rem;
+}
+
+.landing-page .container .heading .title-wrapper .sub-title {
+  margin-top: 1rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.landing-page .container .heading .description {
+  margin-top: 10rem;
+  font-size: 1.6rem;
+  line-height: 1.44;
+  letter-spacing: 0.8px;
+  text-align: justify;
+}
+
+.landing-page .container .heading .description span {
+  font-family: MoonTime;
+  font-size: 4rem;
+  text-transform: capitalize;
+  line-height: 0.6;
+}
+
+.landing-page .container img {
+  max-width: 44rem;
+  margin-left: 16rem;
+}
+
+.landing-page .slogan {
+  position: absolute;
+  top: 50%;
+  left: 4rem;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  font-style: italic;
+  -webkit-transform: rotate(270deg) translateX(-50%);
+          transform: rotate(270deg) translateX(-50%);
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+/*# sourceMappingURL=index.css.map */
